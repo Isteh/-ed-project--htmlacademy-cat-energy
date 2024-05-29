@@ -1,0 +1,56 @@
+.button{
+  padding: 11px 0;
+  width: 100%;
+
+  font-family: $title-font;
+  font-size: 14px;
+  line-height: 18px;
+  color: $color-white;
+  text-transform: uppercase;
+  font-weight: 400;
+
+  background-color: $color-accent;
+  border: 0;
+
+  cursor: pointer;
+
+  &:hover {
+    background-color: #5EAA2F;
+  }
+
+  &:active{
+    background-color: #5EAA2F;
+    color: rgba(255, 255, 255, 0.3);
+  }
+
+  &--catalog{
+    padding: 10px 0;
+
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  &--more{
+    color: $color-special-dark-grey;
+
+    background-color: $color-grey;
+
+    &:hover {
+      background-color: #ebebeb;
+    }
+
+    &:active{
+      background-color: #ebebeb;
+      color: rgba(0, 0, 0, 0.3);
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 1;
+
+    padding: 17px 0;
+  }
+}
+
+

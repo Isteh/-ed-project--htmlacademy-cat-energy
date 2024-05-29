@@ -1,0 +1,142 @@
+.site-menu{
+  list-style: none;
+
+  width: 100%;
+
+  font-family: $title-font;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1;
+  text-align: center;
+  text-transform: uppercase;
+
+  position: absolute;
+  top: 65px;
+  left: 0;
+  z-index: 1;
+
+  background-color: transparent;
+
+  @media (min-width:$tablet-width) {
+    position: static;
+
+    width: auto;
+
+    display: flex;
+
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 400;
+  }
+
+  @media (min-width:$desktop-width) {
+
+  }
+}
+
+
+
+.site-menu__item{
+  position: relative;
+  // границы ячеек
+  &::before{
+    content: '';
+    display: block;
+
+    position: absolute;
+    left: 0;
+    right: 0;
+
+    height: 1px;
+
+    background-color: #e6e6e6;
+  }
+
+  &:last-child{
+    &::after{
+      content: '';
+      display: block;
+
+      position: absolute;
+      left: 0;
+      right: 0;
+
+      height: 1px;
+
+      background-color: #e6e6e6;
+    }
+  }
+
+  @media (min-width:$tablet-width) {
+
+    //обнуление границ ячеек
+    &::before{
+      content: none;
+    }
+
+    &:last-child{
+      &::after{
+        content: none;
+      }
+    }
+
+    //выделение текущего полосой
+    &:last-child.site-menu__item--current::after,
+    //необходимый костыль из-за верхнего обнуления ячеек
+    &--current::after{
+      content: '';
+
+      position: absolute;
+      left: 17.5px;
+      right: 17.5px;
+
+      height: 2px;
+
+      background-color: $color-accent;
+    }
+
+  }
+}
+
+.site-menu--theme-accent .site-menu__item--current{
+  @media (min-width: $desktop-width) {
+    &::after{
+    background-color: $color-white;
+    }
+    }
+}
+
+.site-menu--theme-accent{
+  @media (min-width:$desktop-width) {
+    color: $color-white;
+  }
+}
+
+.site-menu__link {
+  display: block;
+
+  padding-top: 22px;
+  padding-bottom: 24px;
+
+  color: inherit;
+  text-decoration: none;
+
+  @media (min-width:$tablet-width) {
+    padding: 0 17.5px;
+    padding-top: 18px;
+    padding-bottom: 9px;
+
+    &:hover{
+      opacity: 0.8;
+    }
+    &:active{
+      opacity: 0.6;
+    }
+  }
+
+  @media (min-width:$desktop-width) {
+    padding-top: 16px;
+    padding-bottom: 8px;
+
+  }
+}

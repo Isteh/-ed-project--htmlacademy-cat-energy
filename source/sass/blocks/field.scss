@@ -1,0 +1,14 @@
+.field{
+  font-family: $title-font;
+  text-transform: uppercase;
+  color: $color-special-dark-grey;
+  font-size: 16px;
+  line-height: 18px;
+}
+
+.field__input{
+  font-family: inherit;
+  text-transform: uppercase;
+  font-size: 16px;
+  line-height: 18px;
+}

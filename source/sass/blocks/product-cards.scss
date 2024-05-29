@@ -1,0 +1,39 @@
+.product-cards{
+  list-style: none;
+}
+
+.product-cards__title{
+  font-family: $title-font;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 400;
+  color: $color-special-dark-grey;
+}
+
+.product-cards__about-list{
+  color: $color-special-dark-grey;
+
+  list-style: none;
+}
+
+.product-cards__about-title{
+  font-size: 12px;
+  line-height: 16px;
+
+}
+
+.product-cards__about-desc{
+  font-size: 12px;
+  line-height: 16px;
+
+}
+
+.product-cards__title--show-more{
+  color: #111111;
+}
+
+.product-cards__show-more-text{
+  font-size: 12px;
+  line-height: 16px;
+  color:$color-special-dark-grey;
+}

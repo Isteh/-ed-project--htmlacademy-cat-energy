@@ -1,0 +1,262 @@
+.live-example{
+  background-color: $color-darkgrey;
+
+  padding:0 $modile-wrapper-margin;
+  padding-top: 25px;
+  padding-bottom: 40px;
+
+  position: relative;
+
+  @media (min-width:$tablet-width) {
+    padding: 0 $tablet-wrapper-margin;
+    padding-bottom: 56px;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 167px;
+
+    background-color: transparent;
+
+    &::after{
+      content: '';
+
+      position: absolute;
+      z-index: -1;
+      bottom: 0;
+
+      width: 100%;
+      height: 462px;
+
+      background-color: $color-darkgrey;
+    }
+  }
+
+  @media (min-width:$desktop-width) {
+    width: auto;
+
+    padding: 0 $desktop-wrapper-margin;
+
+    grid-template-columns: 35.6% auto;
+    column-gap: 193px;
+
+    &::after{
+      width: 100%;
+    }
+  }
+}
+
+.live-example__title{
+  margin-bottom: 40px;
+
+  @media (min-width:$tablet-width) {
+    margin-bottom: 63px;
+    grid-column: 1/-1;
+  }
+
+  @media (min-width:$desktop-width) {
+    grid-column-end: 2;
+
+    margin-bottom: 146px;
+  }
+}
+
+.live-example__text{
+  padding: 0;
+  margin: 0;
+
+  margin-bottom: 34.5px;
+
+  color: $color-special-dark-grey;
+
+  @media (min-width:$tablet-width) {
+    margin-bottom: 54px;
+
+    grid-column: 1/-1;
+  }
+
+  @media (min-width:$desktop-width) {
+    grid-column-end: 2;
+
+    margin-bottom: 69px;
+  }
+}
+
+.live-example__list{
+  margin: 0 auto;
+  padding: 0;
+  margin-bottom: 20px;
+
+  width: 280px;
+
+  text-align: center;
+
+  display: grid;
+  grid-template-columns: 124px 124px;
+  column-gap: 32px;
+  row-gap: 7.53px;
+
+  @media (min-width:$tablet-width) {
+    margin: 0;
+
+    grid-template-columns: 162px 162px;
+    column-gap: 42px;
+    row-gap: 11px;
+
+    margin-bottom: 80px;
+  }
+
+  @media (min-width:$desktop-width) {
+    grid-column-end: 2;
+
+    margin-bottom: 55px;
+  }
+}
+
+.live-example__value{
+  position: relative;
+  font-family: $title-font;
+  font-size: 24px;
+  line-height: 1;
+  text-transform: uppercase;
+
+  padding-top: 15px;
+
+  grid-row-start: 1;
+
+  &::before{
+    content: '';
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 124px;
+    height: 56px;
+
+    background-image: url('../../img/border-live-example.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  @media (min-width: $tablet-width) {
+    font-size: 30px;
+    line-height: 37px;
+
+    &::before{
+      width: 162px;
+      height: 72px;
+    }
+  }
+}
+
+.live-example__description{
+  margin: 0;
+
+  font-size: 12px;
+  line-height: 1;
+  text-transform: lowercase;
+}
+
+.live-example__cost{
+  padding: 0;
+  margin: 0;
+  margin-bottom: 40px;
+
+  font-family: $title-font;
+  line-height: 20px;
+  text-transform: uppercase;
+  text-align: center;
+
+  br {
+    display: none;
+  }
+
+  @media (min-width:$tablet-width) {
+    text-align: end;
+
+    br{
+      display: block;
+    }
+  }
+
+  @media (min-width:$desktop-width) {
+    grid-column-end: 2;
+    text-align: start;
+
+    margin-bottom: 75px;
+
+    br{
+      display: none;
+    }
+  }
+}
+
+.live-example__imgs{
+  margin-bottom: 15px;
+
+  position: relative;
+
+  @media (min-width: $tablet-width) {
+    grid-column: 1/-1;
+
+    margin-bottom: 25px;
+  }
+
+  @media (min-width: $desktop-width) {
+    position: absolute;
+    top: -43px;
+    right: 0;
+  }
+}
+
+.live-example__img{
+  margin: 0 auto;
+  display: none;
+
+  &--current{
+    display: block;
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 591px;
+    height: 576px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 592px;
+    height: 511px;
+  }
+}
+
+.live-example__imgs--nojs .live-example__img{
+  display: block;
+  margin: 0 auto;
+
+  clip-path: inset(0 54% 0 0 );
+
+  &:last-child{
+    position: absolute;
+    top: 0;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    clip-path: inset(0 0 0 46%);
+  }
+}
+
+.live-example__range-toggle{
+  margin: 0 35px;
+
+  @media (min-width:$tablet-width) {
+    grid-column: 1/-1;
+  }
+
+  @media (min-width:$desktop-width) {
+    position: absolute;
+    right: 0;
+    bottom: 65px;
+
+    width: 45.3%;
+  }
+}

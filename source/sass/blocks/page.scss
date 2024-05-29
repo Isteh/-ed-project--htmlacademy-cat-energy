@@ -1,0 +1,25 @@
+.page{
+  font-family: $text-font;
+  font-size: 14px;
+  line-height: 18px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
+.page__body{
+  margin: 0;
+}
+
+.page__header{
+  @media (min-width: $tablet-width){
+    margin-bottom: 60px;
+  }
+
+  @media (min-width: $tablet-width){
+    margin-bottom: 112px;
+  }
+}
+

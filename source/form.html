@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html class="page" lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CAT ENERGY</title>
+  <link rel="stylesheet" href="css/style.min.css">
+  <link rel="icon" href="favicon.ico">
+  <link rel="icon" href="img/favicons/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="img/favicons/180.png">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="preload" href="fonts/oswaldregular.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+</head>
+
+<body class="page__body">
+
+  <header class="page__header">
+
+    <nav class="page-header page-header--closed page-header--nojs">
+      <a class="page-header__logo logo" href="index.html">
+        <picture>
+          <source media="(min-width: 1280px)" srcset="./img/logo/logo-icon-desktop.svg">
+          <source media="(min-width: 768px)" srcset="./img/logo/logo-icon-tablet.svg">
+          <img class="logo__img" src="./img/logo/logo-icon-mobile.svg" width="34" height="38" alt="Cat Energy">
+        </picture>
+        <picture>
+          <source media="(min-width: 1280px)" srcset="./img/logo/logo-sign-desktop.svg">
+          <source media="(min-width: 768px)" srcset="./img/logo/logo-sign-tablet.svg">
+          <img class="logo__sign" src="./img/logo/logo-sign-mobile.svg" width="101" height="18" alt=""
+            aria-hidden="true">
+        </picture>
+      </a>
+
+      <button class="page-header__toggler " type="button">
+        <span class="visually-hidden">Открыть меню</span>
+      </button>
+
+      <ul class="page-header__menu site-menu">
+        <li class="site-menu__item ">
+          <a class="site-menu__link" href="index.html">
+            Главная
+          </a>
+        </li>
+        <li class="site-menu__item ">
+          <a class="site-menu__link " href="catalog.html">
+            Каталог продукции
+          </a>
+        </li>
+        <li class="site-menu__item site-menu__item--current">
+          <a class="site-menu__link " href="">
+            Подбор программы
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+  </header>
+
+  <main class="page-main">
+    <h1 class="page-main__title">Подбор программы</h1>
+    <p class="page-main__subtitle">Заполните анкету, и мы подберем<br> программу питания для вашего кота</p>
+    <section class="page-main__section page-form">
+      <form class="page-form__body">
+
+        <fieldset class="page-form__group field-group">
+          <legend class="visually-hidden"> Данные кота</legend>
+          <ul class="field-group__list">
+            <li class="field-group__item">
+              <label class="field">
+                <span class="field__name">Имя:*</span>
+                <input class="field__input" name="cat-name" type="text" placeholder="Барсик" required>
+              </label>
+            </li>
+            <li class="field-group__item">
+              <label class="field">
+                <span class="field__name">Вес:*</span>
+                <input class="field__input" name="cat-weight" type="text" placeholder="7" required>
+              </label>
+            </li>
+            <li class="field-group__item">
+              <label class="field">
+                <span class="field__name">Возраст(лет):</span>
+                <input class="field__input" name="cat-age" type="text" placeholder="7">
+              </label>
+            </li>
+          </ul>
+        </fieldset>
+
+        <fieldset class="page-form__group field-group">
+          <legend class="visually-hidden"> Цель программы</legend>
+          <ul class="field-group__list">
+            <li class="field-group__item">
+              <label class="control control--radio">
+                <input class="control__input" name="target-program" type="radio" value="fit">
+                <span class="control__name">Похудение</span>
+              </label>
+            </li>
+            <li class="field-group__item">
+              <label class="control control--radio">
+                <input class="control__input" name="target-program" type="radio" value="heavy">
+                <span class="control__name">Набор массы</span>
+              </label>
+            </li>
+            <li class="field-group__item">
+              <label class="control control--radio">
+                <input class="control__input" name="target-program" type="radio" value="advice">
+                <span class="control__name">Не знаю (нужен ваш совет)</span>
+              </label>
+            </li>
+          </ul>
+        </fieldset>
+
+        <fieldset class="page-form__group field-group">
+          <legend class="field-group__heading"> Контактные данные (владельца кота)</legend>
+          <ul class="field-group__list">
+            <li class="field-group__item">
+              <label class="field">
+                <span class="field__name">E-mail:*</span>
+                <input class="field__input" name="e-mail" type="email" placeholder="Kuklachev@gmail.com" required>
+              </label>
+            </li>
+            <li class="field-group__item">
+              <label class="field">
+                <span class="field__name">Телефон:*</span>
+                <input class="field__input" name="phone" type="tel" placeholder="8 (960) 900-60-90" required>
+              </label>
+            </li>
+          </ul>
+        </fieldset>
+
+        <div class="form__group field-group">
+          <label class="field-group__heading" for="comment">Комментарий</label>
+
+          <div class="field">
+            <textarea class="field__input" name="comment" id="comment" rows="5"
+              placeholder="Расскажите обо всех повадках кота"></textarea>
+          </div>
+        </div>
+
+        <fieldset class="form__group field-group">
+          <legend class="field-group__heading"> Дополнительно</legend>
+          <ul class="field-group__list">
+            <li class="field-group__item">
+              <label class="control control--checkbox">
+                <input class="control__input" name="additional" type="checkbox" value="sweetener">
+                <span class="control__name">Сахарозаменитель</span>
+              </label>
+            </li>
+            <li class="field-group__item">
+              <label class="control control--checkbox">
+                <input class="input-checkbox" name="additional" type="checkbox" value="milk">
+                <span class="control__name">Молоко</span>
+              </label>
+            </li>
+            <li class="field-group__item">
+              <label class="control control--checkbox">
+                <input class="input-checkbox" name="additional" type="checkbox" value="water">
+                <span class="control__name">Питьевая вода</span>
+              </label>
+            </li>
+            <li class="field-group__item">
+              <label class="control control--checkbox">
+                <input class="input-checkbox" name="additional" type="checkbox" value="vitamins">
+                <span class="control__name">Витамины</span>
+              </label>
+            </li>
+          </ul>
+          <button class="page-form__button button" type="submit">Отправить заказ</button>
+          <span class="page-form__tip-required">* — Обязательные поля </span>
+        </fieldset>
+
+      </form>
+  </main>
+
+  <footer class="page__footer page-footer">
+
+    <section class="page-footer__contacts contacts">
+
+      <h2 class="contacts__title">Приглашаем <br>к сотрудничеству дилеров! </h2>
+      <p class class="contacts__address">ул. Большая<br>Конюшенная, д. 19/8 <span
+          class="contacts__city">Санкт-Петербург</span>
+      </p>
+      <img class="contacts__map" src="./img/map.png" width="320" height="362" alt="Карта к нашему офису">
+    </section>
+
+    <footer class="page-footer__footer-links footer-links">
+
+      <img class="footer-links__logo logo" src="" alt="CAT ENERGY" width="128" height="24">
+      <ul class="footer-links__social social">
+        <li class="social__item">
+          <a class="social__link">
+            <svg class="social__svg" src="" alt="">
+              <span class="visually-hidden">Наш Vkontakte</span>
+          </a>
+        </li>
+        <li class="social-links__item">
+          <a class="social-links__link">
+            <svg class="social-links__svg" src="" alt="">
+              <span class="visually-hidden">Наш Instagram</span>
+          </a>
+        </li>
+        <li class="social-links__item">
+          <a class="social-links__link">
+            <svg class="social-links__svg" src="" alt="">
+              <span class="visually-hidden">Наш Facebook</span>
+          </a>
+        </li>
+      </ul>
+      <img class="footer-links__academy" src="" alt="html academy" width="163" height="34">
+
+    </footer>
+
+  </footer>
+  <script src="./js/script.min.js"></script>
+</body>
+
+</html>

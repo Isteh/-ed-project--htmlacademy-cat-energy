@@ -1,0 +1,49 @@
+.range-toggle{
+  display: grid;
+  grid-template-columns: 49px 1fr 49px;
+}
+
+.range-toggle__button{
+  position: relative;
+
+  padding: 5px 0;
+  border: 0;
+  background-color: transparent;
+
+  font-family: $title-font;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+
+  cursor: pointer;
+
+  &--after{
+    grid-column-start: 3;
+  }
+
+  &::after{
+    content: '';
+
+    position: absolute;
+    left: 6px;
+    right: 6px;
+    bottom: 0;
+
+    height: 1px;
+
+    opacity: 0.26;
+
+    background-image: url('../../img/underline_dotted.svg');
+    background-repeat: repeat-x;
+  }
+
+  &:hover::after{
+    opacity: 0.4;
+
+    background-color: #000000;
+  }
+
+  &:active::after{
+    opacity: 0;
+  }
+}

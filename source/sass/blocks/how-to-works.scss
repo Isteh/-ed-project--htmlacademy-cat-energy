@@ -1,0 +1,160 @@
+.how-to-works{
+  padding: 0 $modile-wrapper-margin;
+
+  @media (min-width:$tablet-width) {
+    padding: 0 $tablet-wrapper-margin;
+    padding-right: 105px;
+
+    border-bottom: 1px solid #e6e6e6;
+  }
+
+  @media (min-width:$desktop-width) {
+    width: 85%;
+
+    padding: 0;
+    margin: 0 auto;
+
+    border-bottom: none;
+  }
+}
+
+.how-to-works__title{
+  margin-bottom: 40px;
+
+  @media (min-width: 32px) {
+  margin-bottom: 32px;
+  }
+}
+
+.how-to-works__list{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  padding-bottom: 30px;
+
+  color: $color-special-dark-grey;
+
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  @media (min-width:$tablet-width) {
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    padding-bottom: 45px;
+
+    row-gap: 37px;
+  }
+
+  @media (min-width:$desktop-width) {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.how-to-works__item{
+  min-height: 60px;
+
+  margin-left: 80px;
+
+  position: relative;
+
+  &::before{
+    content: '';
+
+    position: absolute;
+    left: -80px;
+    width: 60px;
+    height: 60px;
+
+    background-color: $color-accent;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &--leaf::before{
+    background-image: url(../../img/icon_leaf.svg);
+  }
+
+  &--powder::before{
+    background-image: url(../../img/icon_powder.svg);
+  }
+
+  &--meal::before{
+    background-image: url(../../img/icon_meal.svg);
+  }
+
+  &--month::before{
+    background-image: url(../../img/icon_month.svg);
+  }
+
+  @media (min-width: $tablet-width) {
+    box-sizing: border-box;
+    min-height: 280px;
+
+    margin-left: 0;
+    padding-top: 151px;
+
+    &::before{
+      left: auto;
+      top: 40px;
+    }
+
+    &--leaf{
+      width: 230px;
+    }
+
+    &--powder{
+      width: 246px;
+    }
+
+    &--meal{
+      width: 247px;
+    }
+
+    &--month{
+      width: 249px;
+    }
+
+    &::after{
+      content: '';
+
+      position: absolute;
+      z-index: -1;
+      top: 0;
+      right: 0;
+
+      font-family: $title-font;
+      font-size: 280px;
+      line-height: 1;
+      color: $color-grey;
+    }
+
+    &--leaf::after{
+      content: '1';
+    }
+
+    &--powder::after{
+      content: '2';
+    }
+
+    &--meal::after{
+      content: '3';
+    }
+
+    &--month::after{
+      content: '4';
+    }
+  }
+}
+
+
+.how-to-works__text{
+  padding: 0;
+  margin: 0;
+  padding-top:2px;
+  padding-bottom: 4px;
+}

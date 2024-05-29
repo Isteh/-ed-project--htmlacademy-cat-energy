@@ -1,0 +1,135 @@
+ .page-header{
+  position: relative;
+
+  padding: 0 $modile-wrapper-margin ;
+  padding-top: 10px;
+
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width:$tablet-width) {
+    padding: 24px $tablet-wrapper-margin 0;
+
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  @media (min-width:$desktop-width) {
+    padding: 53px $desktop-wrapper-margin 0;
+  }
+ }
+
+
+ .page-header__toggler{
+  border: 0;
+  padding: 0;
+  background-color: transparent;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 65px;
+
+  cursor: pointer;
+  @media (min-width:$tablet-width) {
+    display: none;
+  }
+ }
+
+ .page-header__logo{
+  margin-bottom: 17.39px;
+
+  @media (min-width: $tablet-width) {
+    margin: 0;
+  }
+ }
+
+ // закрытая кнопка-три полоски
+
+ .page-header--closed .page-header__toggler::before{
+  content: '';
+
+  position: absolute;
+  right: 20px;
+  top: 32px;
+
+  width: 24px;
+  height: 1.5px;
+
+  background-color: #000000;
+
+  box-shadow: 0 8px 0 #000000,
+              0 -8px 0 #000000;
+ }
+
+// крестик-кнопка
+
+ .page-header--opened .page-header__toggler::before{
+  content: '';
+
+  position: absolute;
+  right: 20px;
+  top: 32px;
+
+  width: 24px;
+  height: 1.5px;
+
+  background-color: #000000;
+
+  transform: rotate(45deg);
+ }
+
+ .page-header--opened .page-header__toggler::after{
+  content: '';
+
+  position: absolute;
+  right: 20px;
+  top: 32px;
+
+  width: 24px;
+  height: 1.5px;
+
+  background-color: #000000;
+
+  transform: rotate(-45deg);
+ }
+
+ .page-header__menu{
+  padding: 0;
+  margin: 0;
+
+  @media (min-width:$tablet-width) {
+    margin-left: auto;
+  }
+}
+
+ .page-header--opened .page-header__menu{
+  background-color: #ffffff;
+
+  margin-bottom: 1px;
+ }
+
+.page-header--closed .page-header__menu{
+  display: none;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+  }
+}
+
+.page-header--nojs .page-header__menu{
+  @media (max-width:$tablet-width){
+    display: block;
+    position: static;
+
+    margin-left: -$modile-wrapper-margin;
+    margin-right: -$modile-wrapper-margin;
+
+    width: 100vw;
+  }
+}
+
+
